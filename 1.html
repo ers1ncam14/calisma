@@ -1,0 +1,170 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hesap Makinasi</title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>    
+</head>
+<body>
+<script>
+function toplam(){
+	var deger1 = parseInt(document.getElementById('sayi1').value);
+  var deger2 = parseInt(document.getElementById('sayi2').value);
+  	document.getElementById('sonuc').value = deger1 + deger2;
+}
+function cikartma(){
+	var deger1 = parseInt(document.getElementById('sayi1').value);
+  var deger2 = parseInt(document.getElementById('sayi2').value);
+  	document.getElementById('sonuc').value = deger1 - deger2;
+}
+function carpma(){
+	var deger1 = parseInt(document.getElementById('sayi1').value);
+  var deger2 = parseInt(document.getElementById('sayi2').value);
+  	document.getElementById('sonuc').value = deger1 * deger2;
+}
+function bolme(){
+	var deger1 = parseInt(document.getElementById('sayi1').value);
+  var deger2 = parseInt(document.getElementById('sayi2').value);
+  	document.getElementById('sonuc').value = deger1 / deger2;
+}
+    
+$( "#topla" ).click(function() {
+  $( "#sonuc" ).animate({
+    width: "70%",
+    opacity: 0.4,
+    marginLeft: "0.6in",
+    fontSize: "3em",
+    borderWidth: "6px"
+  }, 1500 );
+});
+    
+</script>
+<style>
+body{
+  background-color: #d35b40;
+  float: none;
+  width: auto;
+    
+}
+.calculater{
+  border:3px solid #fff;
+  border-radius:3px;
+  width:40%;
+  height:40%;
+  margin: 0 auto;
+  background-color: #4aafcc;
+
+}    
+#sayi1{
+  width:43.4%;
+  height:40px;
+  border:3px solid #999;
+  padding:5px;
+  margin:5px;
+  font-weight: bold;
+}
+#sayi1:focus{
+  border:3px solid #d35b40;    
+}    
+#sayi2{
+  width:43.4%;
+  height:40px;
+  border:3px solid #999;
+  padding:5px;
+  margin:5px;
+  font-weight: bold;
+}
+#sayi2:focus{
+  border:3px solid #d35b40;    
+} 
+#topla{
+  width:20%;
+  height:40px;
+  margin:5px;
+  cursor:pointer;
+  font-size:17px;
+  border:3px solid #999;
+  color:#4aafcc;
+  font-weight: bold;
+}
+#topla:hover{
+  border:3px solid #d35b40;    
+}     
+#fark{
+  width:20%;
+  height:40px;
+  margin:5px;
+  cursor:pointer;
+  font-size:17px;
+  border:3px solid #999;
+  color:#4aafcc;
+  font-weight: bold;    
+}
+#fark:hover{
+  border:3px solid #d35b40;    
+}  
+#carp{
+  width:20%;
+  height:40px;
+  margin:5px;
+  cursor:pointer;
+  font-size:17px;
+  border:3px solid #999;
+  color:#4aafcc;
+  font-weight: bold;    
+}
+#carp:hover{
+  border:3px solid #d35b40;    
+}      
+#bol{
+  width:20%;
+  height:40px;
+  margin:5px;
+  cursor:pointer;
+  font-size:17px;
+  border:3px solid #999;
+  color:#4aafcc;
+  font-weight: bold;    
+}
+#bol:hover{
+  border:3px solid #d35b40;    
+}      
+#sonuc{
+  width:50%;
+  height:50px;
+  border:3px solid #999;
+  padding:5px;
+  margin:5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+#sonuc:hover{
+  border:3px solid #d35b40;    
+}      
+h3{
+  font-size:15px;
+  margin:5px;
+  color:#dad826;
+}
+h2{
+  font-size:20px;
+  margin:0 auto;
+  color:#dad826;
+  float: none;
+  text-align: center;
+}    
+</style>
+<h2>HESAP MAKINASI</h2>
+<div class="calculater">
+    <input type="text" id="sayi1"/>
+    <input type="text" id="sayi2"/>
+    <br>
+    <input type="button" value="+" id="topla" onClick="toplam()"/>
+    <input type="button" value="-" id="fark" onClick="cikartma()">
+    <input type="button" value="*" id="carp" onClick="carpma()">
+    <input type="button" value="/" id="bol" onClick="bolme()">
+    <br>
+    <h3>SONUC</h3>
+    <input type="text" id="sonuc"/>
+</div>    
+</body>
+</html>
